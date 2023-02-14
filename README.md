@@ -22,7 +22,48 @@ Region,Country,Name,Industry,Market Value(NOK),Market Value(USD),Voting,Ownershi
 ```
 
 
+```
 
+.schema fund
+
+drop table fund
+
+CREATE TABLE FUND(
+	Region   Text NOT NULL,
+	Country  Text NOT NULL,
+	Name     Text NOT NULL,
+	Industry Text NOT NULL,
+	MarketValueNOK INT,
+	MarketValueUSD INT,
+	Voting   REAL DEFAULT 0,
+	Ownership REAL DEFAULT 0,
+	IncorpCountry Text
+);
+
+
+
+INSERT into FUND (
+	Region, 
+	Country,
+	Name  , 
+	Industry, 
+	MarketValueNOK, 
+	MarketValueUSD, 
+	Voting,
+	Ownership,
+	IncorpCountry 
+) VALUES ("Oceania","Australia","29Metals Ltd","Basic Materials","42485096","4312770",0.69,0.69,"Australia" ),
+("Oceania","Australia","4DMedical Ltd","Health Care","24487945","2485833",2.96,2.96,"Australia"),
+("Oceania","Australia","5E Advanced Materials Inc","Basic Materials","1963","199",0,0,"United States"),
+("Oceania","Australia","29Metals Ltd","Basic Materials","42485096","4312770",0.69,0.69,"Australia"),
+("Oceania","Australia","4DMedical Ltd","Health Care","24487945","2485833",2.96,2.96,"Australia"),
+("Oceania","Australia","5E Advanced Materials Inc","Basic Materials","1963","199",0,0,"United States"),
+("Oceania","Australia","A2B Australia Ltd","Financials","4964","504",0,0,"Australia"),
+("Oceania","Australia","Abacus Property Group","Real Estate","109837346","11149868",0.7,0.7,"Australia"),
+("Oceania","Australia","Accent Group Ltd","Consumer Discretionary","39956265","4056062",0.64,0.64,"Australia"),
+("Oceania","Australia","Acrow Formwork and Construction Services Ltd","Basic Materials","32755151","3325058",3,3,"Australia"),
+
+```
 Problem : The line cannot be inserted as it has comma demiters for columns as well as ** Market Value ** in NOK and USD.
 The commas in the 'Market value' has to be removed.
 
