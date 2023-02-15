@@ -1,4 +1,4 @@
-# Decoding_Wealth_Fund_Data_for-SQLite3
+# Decoding_Wealth_Fund_Data_using_SQLite3_DB
 
 The data excel file can be downloaded from their site.
 The format is as shown. 
